@@ -35,9 +35,16 @@ body {
   cursor: pointer;
 }
 
-.border-bottom {
-  border-bottom: 1px solid black;
+.text-underline::after {
+  content: "";
+  background-color: red;
+  width: 6px;
+  height: 300px;
+  transform: rotate(89.90deg)
+  translateY(300px)
+  translateX(-185px);
 }
+
 
 .accordeon__title::after {
   content: "+";
@@ -45,8 +52,9 @@ body {
   padding: 0 5px;
 }
 
-.minus {
+.minus::after {
   content: "-";
+  border: 1px solid black;
   padding: 0 5px;
 }
 
@@ -56,4 +64,9 @@ body {
   color: #333;
   padding: 0 255px;
   font-size: 20px;
+}
+
+
+.text {
+  display: flex;
 }
